@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&family=Tajawal:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f6fef75e93.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3 class="date" id="today-date"></h3>
+
+        <h5 class="time" id="current-time"></h5>
+
+        <h3>
+          <strong
+            ><span class="temperature" id="temp"></span>
+            <span class="units"> °F</span></strong
+          >
+        </h3>
+        <h4 class="description" id="description">Mostly Sunny</h4>
+        <p>
+          Humidity:
+          <span class="humidity" id="humidity">humidity </span> %
+
+          <br />
+          Wind:
+          <span class="wind" id="wind-speed">wind </span> km/h
+        </p>
+
+        <h3 id="current-city">San Francisco</h3>
+      </div>
+      <div class="forecast">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-sun"></i></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Friday</h6>
+            <p class="card-text">61°F Sunny</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-sun"></i></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Saturday</h6>
+            <p class="card-text">61°F Sunny</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-cloud-sun"></i></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Sunday</h6>
+            <p class="card-text">59°F Mostly Sunny</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-cloud"></i></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Monday</h6>
+            <p class="card-text">55°F Cloudy</p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-cloud-sun"></i></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Tuesday</h6>
+            <p class="card-text">57°F Mostly Sunny</p>
+          </div>
+        </div>
+      </div>
+      <form class="changecities p-3" id="search-form">
+        <input type="text" placeholder="Enter City" id="search-text" />
+        <button type="submit" class="btn btn-primary" id="search">
+          <i class="fas fa-search"></i>
+        </button>
+        <button
+          class="btn btn-primary"
+          id="currentlocation"
+          type="button"
+          id="location"
+        >
+          <i class="fas fa-map-marker"></i>
+        </button>
+      </form>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>

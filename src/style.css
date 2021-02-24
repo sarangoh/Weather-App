@@ -1,0 +1,26 @@
+.container {
+  max-width: 500px;
+  text-align: center;
+  margin-top: 25px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-family: "Quicksand", sans-serif;
+  font-family: "Tajawal", sans-serif;
+  background-image: url("https://images.pexels.com/photos/2097628/pexels-photo-2097628.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+}
+
+.header {
+  color: rgb(236, 231, 231);
+}
+
+.forecast {
+  margin: 0 auto;
+  display: ;
+}
+.card {
+  display: block;
+  margin: 0 auto;
+  opacity: 0.6;
+  font-weight: bold;
+}
