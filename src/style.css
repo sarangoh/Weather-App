@@ -24,3 +24,15 @@
   opacity: 0.6;
   font-weight: bold;
 }
+
+#footer {
+  color: rgb(16, 64, 196);
+}
+#link {
+  text-decoration: none;
+  text-decoration-style: none;
+  color: rgb(16, 64, 196);
+}
+#link:hover {
+  text-decoration: underline;
+}

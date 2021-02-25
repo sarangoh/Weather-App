@@ -69,7 +69,6 @@ form.addEventListener("submit", search);
 searchCity("San Francisco");
 
 function searchLocation(position) {
-  position.preventDefault();
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
   let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
@@ -79,8 +78,7 @@ function searchLocation(position) {
 }
 function getCurrentLocation(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
 }
-
+navigator.geolocation.getCurrentPosition(searchLocation);
 let currentLocationbtn = document.querySelector("#location");
 currentLocationbtn.addEventListener("click", getCurrentLocation);
